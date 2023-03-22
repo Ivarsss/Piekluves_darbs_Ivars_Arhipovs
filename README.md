@@ -1,1 +1,0 @@
-# Piekluves_darbs_Ivars_Arhipovs
