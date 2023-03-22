@@ -1,0 +1,1 @@
+Piekļuves darbs programmēšanā "ceļotāju ceļvedis" ir mājaslapa, kas palīdzēs ikvienam ceļotājam ātri un viegli atrast populārākos valsts objektus un parādīs maršrutu uz tiem. Mājaslapu veidoja 12.a skolnieks Ivars Arhipovs no Jēkabpils Valsts ģimnāzijas. Mājaslapa tika veidota Python valodā ar flask palīdzību.

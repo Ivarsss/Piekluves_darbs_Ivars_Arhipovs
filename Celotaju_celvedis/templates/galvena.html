@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+{% block content %}
+<!--  Ievieto bildi  -->
+<style>
+    body{ 
+        margin: 0;
+        padding: 0; 
+        background: url(static/Ceļojam!-3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+</style>
+<!-- Pievieno vitsrakstam ēnas -->
+<style>
+    .title {
+        color: white;
+        font-size: 50px;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        text-align: center;
+        text-shadow: 0 0 5px black, 0 0 10px black;
+
+    }
+</style>
+<!-- Izvada virsrakstu -->
+<p class="title">Izvēlies valsti uz kuru brauksi!</p>
+<!--  No datubāzes ielasa datus un izveido izvēlni ar tiem  -->
+<form action="/karte" method="POST">
+    <div class="Ievadi">
+        <center>
+        <select style="width: 300px;" class="form-control form-control-lg" type="text" name="ievads" id="ievads">
+        </center>
+            {% for row in data %}
+                {% if row[1] == desired_variable %}
+                    <option value="{{ row[1] }}" selected>{{ row[1] }}</option>
+                    
+                {% else %}
+                    <option value="{{ row[1] }}">{{ row[1] }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <br>
+    </div>
+    <center>
+    <input class="btn btn-primary" type="submit" value="Rādīt maršrutu!">
+    </center>
+</form>
+{% endblock %}
+    </body>
+</html>
